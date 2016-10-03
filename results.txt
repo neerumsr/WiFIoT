@@ -1,3 +1,1 @@
-heartbeat,0;respiration,50
-
-Presence, 1/0;multiple,0/1 
+presence,0;multiple,50

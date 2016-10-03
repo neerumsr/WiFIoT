@@ -11,6 +11,13 @@ const fs = require('fs');
 const readline = require('readline');
 
 const fileName='results.txt';
+
+//Bridge one is my Home bridge 
+const bridgeHome = '001788FFFE10763A';
+
+// Office bridge
+const bridgeCSDK = '001788FFFE1224C4';
+
 const interval=3000;
 var ipAddress;
 var preValue=0;
@@ -50,6 +57,11 @@ huejay.discover()
   .then(bridges => {
     for (var bridge of bridges) {
       console.log(`Id: ${bridge.id}, IP: ${bridge.ip}`);
+      if(bridge.id !== bridgeHome){
+        continue;
+      }
+      console.log(`Iterating....`);
+
       ipAddress = bridge.ip;
 
           client = new huejay.Client({
