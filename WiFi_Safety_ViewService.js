@@ -14,6 +14,7 @@ const fileName='results.txt';
 
 // This is test comment
 const temp='Hello world';
+//AMchange
 
 //Bridge one is my Home bridge 
 const bridgeHome = '001788FFFE10763A';
